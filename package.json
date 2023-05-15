@@ -9,7 +9,8 @@
     "imp": "node --experimental-vm-modules src/imperative.js",
     "func": "node --experimental-vm-modules src/functional.js",
     "domk1": "node --experimental-vm-modules src/do-mk1.js",
-    "domk2": "node --experimental-vm-modules src/do-mk2.js"
+    "domk2": "node --experimental-vm-modules src/do-mk2.js",
+    "domk3": "node --experimental-vm-modules src/do-mk3.js"
   },
   "dependencies": {
     "parcel-bundler": "^1.6.1"
