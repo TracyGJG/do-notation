@@ -29,6 +29,5 @@ function cToF(c) {
 function fToC(f) {
     return div9(mul5(sub32(f)));
 }
-  
 
 runTestCases(cToF, fToC);
