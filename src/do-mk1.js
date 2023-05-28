@@ -1,17 +1,18 @@
 import runTestCases from './testcases.js';
+import { DO } from './do-notation.js';
 
 // Generic operations
 function addM(m) {
-    return (n) => n + m;
+	return n => n + m;
 }
 function subM(m) {
-    return (n) => n - m;
+	return n => n - m;
 }
 function mulM(m) {
-    return (n) => n * m;
+	return n => n * m;
 }
 function divM(m) {
-    return (n) => n / m;
+	return n => n / m;
 }
 
 // Specific operations
@@ -23,23 +24,9 @@ const mul5 = mulM(5);
 const sub32 = subM(32);
 
 // Conversion functions
-const cToF = DO(
-    mul9,
-    div5,
-    add32,
-);
+const cToF = DO(mul9, div5, add32);
 
-const fToC = DO(
-    sub32,
-    mul5,
-    div9,
-);
+const fToC_Operations = [sub32, mul5, div9];
+const fToC = DO(fToC_Operations);
 
 runTestCases(cToF, fToC);
-
-function DO(...fns) {
-    return (input) => fns.reduce(
-        (output, fn) => fn(output),
-        input
-    );
-}
