@@ -6,11 +6,15 @@
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html",
+    "canon": "node --experimental-vm-modules src/canonical.js",
     "imp": "node --experimental-vm-modules src/imperative.js",
     "func": "node --experimental-vm-modules src/functional.js",
     "domk1": "node --experimental-vm-modules src/do-mk1.js",
     "domk2": "node --experimental-vm-modules src/do-mk2.js",
-    "domk3": "node --experimental-vm-modules src/do-mk3.js"
+    "domk3": "node --experimental-vm-modules src/do-mk3.js",
+    "domk4": "node --experimental-vm-modules src/do-mk4.js",
+    "domk5": "node --experimental-vm-modules src/do-mk5.js",
+    "domk6": "node --experimental-vm-modules src/do-mk6.js"
   },
   "dependencies": {
     "parcel-bundler": "^1.6.1"

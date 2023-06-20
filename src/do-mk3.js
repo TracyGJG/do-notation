@@ -1,19 +1,11 @@
 import runTestCases from './testcases.js';
+
 import { DO } from './do-notation.js';
 
-// Generic operations
-function addM(m) {
-	return n => n + m;
-}
-function subM(m) {
-	return n => n - m;
-}
-function mulM(m) {
-	return n => n * m;
-}
-function divM(m) {
-	return n => n / m;
-}
+import { genericOperations } from './operations.js';
+
+const { addM, subM, mulM, divM } = genericOperations;
+
 function extractTemp(tempStr) {
 	return parseInt(tempStr, 10);
 }
