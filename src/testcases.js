@@ -1,35 +1,35 @@
 export const testCases = [
 	{
-		cToF: [
+		celsiusToFahrenheit: [
 			{ input: 100, expected: 212 },
 			{ input: 0, expected: 32 },
 			{ input: -40, expected: -40 },
 		],
-		fToC: [
+		fahrenheitToCelsius: [
 			{ input: 212, expected: 100 },
 			{ input: 32, expected: 0 },
 			{ input: -40, expected: -40 },
 		],
 	},
 	{
-		cToF: [
+		celsiusToFahrenheit: [
 			{ input: '100°C', expected: 212 },
 			{ input: '0°C', expected: 32 },
 			{ input: '-40°C', expected: -40 },
 		],
-		fToC: [
+		fahrenheitToCelsius: [
 			{ input: '212°F', expected: 100 },
 			{ input: '32°F', expected: 0 },
 			{ input: '-40°F', expected: -40 },
 		],
 	},
 	{
-		cToF: [
+		celsiusToFahrenheit: [
 			{ input: '100°C', expected: '212°F' },
 			{ input: '0°C', expected: '32°F' },
 			{ input: '-40°C', expected: '-40°F' },
 		],
-		fToC: [
+		fahrenheitToCelsius: [
 			{ input: '212°F', expected: '100°C' },
 			{ input: '32°F', expected: '0°C' },
 			{ input: '-40°F', expected: '-40°C' },
@@ -46,13 +46,21 @@ export const testCases = [
 	},
 ];
 
-export default function runTestCases(cToF, fToC, testSet = 0) {
+export default function runTestCases(
+	celsiusToFahrenheit,
+	fahrenheitToCelsius,
+	testSet = 0
+) {
 	const testCaseMapping =
 		(name, func) =>
 		({ input, expected }) => ({ name, func, input, expected });
 	const _testCases = [
-		...testCases[testSet].cToF.map(testCaseMapping('cToF', cToF)),
-		...testCases[testSet].fToC.map(testCaseMapping('fToC', fToC)),
+		...testCases[testSet].celsiusToFahrenheit.map(
+			testCaseMapping('celsiusToFahrenheit', celsiusToFahrenheit)
+		),
+		...testCases[testSet].fahrenheitToCelsius.map(
+			testCaseMapping('fahrenheitToCelsius', fahrenheitToCelsius)
+		),
 	];
 	console.table(
 		_testCases.map(({ name, func, input, expected }) => {
@@ -70,7 +78,10 @@ export default function runTestCases(cToF, fToC, testSet = 0) {
 
 export function presentTestCases(converter) {
 	console.table(
-		[...testCases[2].cToF, ...testCases[2].fToC].map(({ input, expected }) => {
+		[
+			...testCases[2].celsiusToFahrenheit,
+			...testCases[2].fahrenheitToCelsius,
+		].map(({ input, expected }) => {
 			const actual = converter(input);
 			return {
 				input,

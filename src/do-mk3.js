@@ -11,9 +11,14 @@ function extractTemp(tempStr) {
 }
 
 // Conversion functions
-const cToF = DO(extractTemp, mulM(9), divM(5), addM(32));
+const celsiusToFahrenheit = DO(extractTemp, mulM(9), divM(5), addM(32));
 
-const fToC_Operations = [extractTemp, subM(32), mulM(5), divM(9)];
-const fToC = DO(fToC_Operations);
+const fahrenheitToCelsius_Operations = [
+	extractTemp,
+	subM(32),
+	mulM(5),
+	divM(9),
+];
+const fahrenheitToCelsius = DO(fahrenheitToCelsius_Operations);
 
-runTestCases(cToF, fToC, 1);
+runTestCases(celsiusToFahrenheit, fahrenheitToCelsius, 1);

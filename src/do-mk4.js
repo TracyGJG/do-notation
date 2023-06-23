@@ -17,11 +17,25 @@ function convertToString(scale) {
 }
 
 // Conversion functions
-const cToF = [extractTemp, mulM(9), divM(5), addM(32), convertToString('F')];
+const celsiusToFahrenheit = [
+	extractTemp,
+	mulM(9),
+	divM(5),
+	addM(32),
+	convertToString('F'),
+];
 
-const fToC = [extractTemp, subM(32), mulM(5), divM(9), convertToString('C')];
+const fahrenheitToCelsius = [
+	extractTemp,
+	subM(32),
+	mulM(5),
+	divM(9),
+	convertToString('C'),
+];
 
-const convertTemporature = DO(IF(isCelsius, DO(cToF), DO(fToC)));
-// const convertTemporature = IF(isCelsius, DO(cToF), DO(fToC));
+const convertTemporature = DO(
+	IF(isCelsius, DO(celsiusToFahrenheit), DO(fahrenheitToCelsius))
+);
+// const convertTemporature = IF(isCelsius, DO(celsiusToFahrenheit), DO(fahrenheitToCelsius));
 
 presentTestCases(convertTemporature);

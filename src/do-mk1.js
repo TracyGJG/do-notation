@@ -7,9 +7,9 @@ import { specificOperations } from './operations.js';
 const { add32, div5, mul9, div9, mul5, sub32 } = specificOperations;
 
 // Conversion functions
-const cToF = DO(mul9, div5, add32);
+const celsiusToFahrenheit = DO(mul9, div5, add32);
 
-const fToC_Operations = [sub32, mul5, div9];
-const fToC = DO(fToC_Operations);
+const fahrenheitToCelsius_Operations = [sub32, mul5, div9];
+const fahrenheitToCelsius = DO(fahrenheitToCelsius_Operations);
 
-runTestCases(cToF, fToC);
+runTestCases(celsiusToFahrenheit, fahrenheitToCelsius);

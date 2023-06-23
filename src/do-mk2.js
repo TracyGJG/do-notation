@@ -7,9 +7,9 @@ import { genericOperations } from './operations.js';
 const { addM, subM, mulM, divM } = genericOperations;
 
 // Conversion functions
-const cToF = DO(mulM(9), divM(5), addM(32));
+const celsiusToFahrenheit = DO(mulM(9), divM(5), addM(32));
 
-const fToC_Operations = [subM(32), mulM(5), divM(9)];
-const fToC = DO(fToC_Operations);
+const fahrenheitToCelsius_Operations = [subM(32), mulM(5), divM(9)];
+const fahrenheitToCelsius = DO(fahrenheitToCelsius_Operations);
 
-runTestCases(cToF, fToC);
+runTestCases(celsiusToFahrenheit, fahrenheitToCelsius);

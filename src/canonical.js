@@ -1,10 +1,15 @@
 import runTestCases from './testcases.js';
 
-function cToF(c) {
-	return (c * 9) / 5 + 32;
+const INTERCEPT = 32;
+const CELSIUS_DELTA = 5;
+const FAHRENHEIT_DELTA = 9;
+const SLOPE = CELSIUS_DELTA / FAHRENHEIT_DELTA;
+
+function celsiusToFahrenheit(c) {
+	return c / SLOPE + INTERCEPT;
 }
-function fToC(f) {
-	return ((f - 32) * 5) / 9;
+function fahrenheitToCelsius(f) {
+	return (f - INTERCEPT) * SLOPE;
 }
 
-runTestCases(cToF, fToC);
+runTestCases(celsiusToFahrenheit, fahrenheitToCelsius);

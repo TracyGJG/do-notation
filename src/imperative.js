@@ -13,11 +13,11 @@ function div(m, n) {
 	return m / n;
 }
 
-function cToF(c) {
+function celsiusToFahrenheit(c) {
 	return add(div(mul(c, 9), 5), 32);
 }
-function fToC(f) {
+function fahrenheitToCelsius(f) {
 	return div(mul(sub(f, 32), 5), 9);
 }
 
-runTestCases(cToF, fToC);
+runTestCases(celsiusToFahrenheit, fahrenheitToCelsius);
