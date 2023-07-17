@@ -41,8 +41,11 @@ const extractInputs = _ =>
 		input,
 		expected,
 	}));
+
 const convertInput = _ => ({ ..._, actual: convertTemporature(_.input) });
+
 const evaluateResult = _ => ({ ..._, result: _.expected === _.actual });
+
 console.table(
 	DO_WITH(extractInputs, convertInput, IDENTITY, evaluateResult)(testCases[4])
 );

@@ -14,7 +14,8 @@
     "domk3": "node --experimental-vm-modules src/do-mk3.js",
     "domk4": "node --experimental-vm-modules src/do-mk4.js",
     "domk5": "node --experimental-vm-modules src/do-mk5.js",
-    "domk6": "node --experimental-vm-modules src/do-mk6.js"
+    "domk6": "node --experimental-vm-modules src/do-mk6.js",
+    "domk7": "node --experimental-vm-modules src/do-mk7.js"
   },
   "dependencies": {
     "parcel-bundler": "^1.6.1"
