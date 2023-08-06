@@ -32,7 +32,7 @@ const fahrenheitToCelsius = [
 	convertToString('C'),
 ];
 
-const convertTemporature = DO_IF(isCelsius)
+const convertTemperature = DO_IF(isCelsius)
 	.THEN_DO(celsiusToFahrenheit)
 	.ELSE_DO(fahrenheitToCelsius);
 
@@ -42,7 +42,7 @@ const extractInputs = _ =>
 		expected,
 	}));
 
-const convertInput = _ => ({ ..._, actual: convertTemporature(_.input) });
+const convertInput = _ => ({ ..._, actual: convertTemperature(_.input) });
 
 const evaluateResult = _ => ({ ..._, result: _.expected === _.actual });
 

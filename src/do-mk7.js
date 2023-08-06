@@ -36,10 +36,10 @@ const fahrenheitToCelsius = DO(
 	processObject(divM(9))
 );
 
-const convertTemporature = DO(
+const convertTemperature = DO(
 	extractTemp,
 	IF(isCelsius, celsiusToFahrenheit, fahrenheitToCelsius),
 	convertToString
 );
 
-presentTestCases(convertTemporature);
+presentTestCases(convertTemperature);

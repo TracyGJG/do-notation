@@ -32,8 +32,8 @@ const fahrenheitToCelsius = [
 	convertToString('C'),
 ];
 
-const convertTemporature = DO_IF(isCelsius)
+const convertTemperature = DO_IF(isCelsius)
 	.THEN_DO(celsiusToFahrenheit)
 	.ELSE_DO(fahrenheitToCelsius);
 
-presentTestCases(convertTemporature);
+presentTestCases(convertTemperature);
